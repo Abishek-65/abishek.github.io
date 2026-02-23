@@ -1,10 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abishek Guest House</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to my website 🔥</h1>
-    <p>Idhu en first free website!</p>
+
+<header>
+    <h1>Abishek Guest House 🏨</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#booking">Booking</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <h2>Luxury Stay in Chennai</h2>
+    <p>Affordable | Comfortable | Safe</p>
+    <button onclick="scrollToBooking()">Book Now</button>
+</section>
+
+<section id="rooms">
+    <h2>Our Rooms</h2>
+
+    <div class="room-card">
+        <img src="https://source.unsplash.com/400x300/?hotel-room" alt="">
+        <h3>Deluxe Room</h3>
+        <p>AC | WiFi | TV | ₹2000/night</p>
+    </div>
+
+    <div class="room-card">
+        <img src="https://source.unsplash.com/400x300/?bedroom" alt="">
+        <h3>Standard Room</h3>
+        <p>Comfort Stay | ₹1200/night</p>
+    </div>
+
+</section>
+
+<section id="booking">
+    <h2>Book Your Stay</h2>
+
+    <form onsubmit="bookNow(event)">
+        <input type="text" placeholder="Your Name" required>
+        <input type="date" required>
+        <input type="number" placeholder="Guests" required>
+        <button type="submit">Confirm Booking</button>
+    </form>
+
+    <p id="msg"></p>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>📞 +91 9489849747</p>
+    <p>📍 Chennai</p>
+</section>
+
+<footer>
+    <p>© 2026 Abishek Guest House</p>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
